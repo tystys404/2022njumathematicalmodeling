@@ -1,0 +1,7 @@
+function [score,id] = suafan(data,reference,quanzhong,index)
+    N = length(index);
+    for i = [1:N]
+        temp = reference(index(i),:) == 1;
+        
+end
+

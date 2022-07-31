@@ -1,0 +1,12 @@
+function caipan = suiji(caipan_orin)
+    for i =[1:20]
+        daitian = caipan_orin(i,:)==0;
+        [~,IX] = sort(daitian,'descend');
+        IX= IX(1:5);
+        rand2 = randperm(5,2);
+        caipan_orin(i,IX(rand2)) = 3;
+        caipan_orin(i,caipan_orin(i,:) == 0) = 4;
+    end
+    caipan = caipan_orin;
+end
+
